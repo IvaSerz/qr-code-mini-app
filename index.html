@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator and Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.3.1/dist/jsQR.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>QR Code Generator and Scanner</h1>
+        <button id="generateBtn">Generate QR Code</button>
+        <button id="scanBtn">Scan QR Code</button>
+        <div id="generateSection" style="display: none;">
+            <input type="text" id="qrData" placeholder="Enter data for QR Code">
+            <button id="generateQrBtn">Generate</button>
+            <canvas id="qrCanvas"></canvas>
+            <div id="logoUpload" style="display: none;">
+                <label for="logoFile">Upload Logo:</label>
+                <input type="file" id="logoFile" accept="image/*">
+            </div>
+        </div>
+        <div id="scanSection" style="display: none;">
+            <input type="file" id="qrImage" accept="image/*">
+            <button id="scanQrBtn">Scan</button>
+            <p id="scanResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
